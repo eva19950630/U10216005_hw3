@@ -59,6 +59,8 @@ public class BMIFrame extends JFrame {
 			
 			BMI bmi2 = new BMI(height, weight, bmi);
 			
+			jtfBMI.setText(String.format("%.2f" , bmi2.getBMI()));
+			
 		}
 		
 	}
