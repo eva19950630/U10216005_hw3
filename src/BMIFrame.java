@@ -28,21 +28,24 @@ public class BMIFrame extends JFrame {
 	
 	public BMIFrame() {
 		
-		JPanel p1 = new JPanel(new GridLayout(5, 2));
+		JPanel p1 = new JPanel(new GridLayout(2, 2));
 		p1.add(new JLabel("Your height in inches"));
 		p1.add(jtfHeight);
 		p1.add(new JLabel("Your weight in pounds"));
 		p1.add(jtfWeight);
-		p1.add(new JLabel("Your BMI is"));
-		p1.add(jtfBMI);
-		p1.add(new JLabel("Result"));
-		p1.add(jtfResult);
 		
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		p2.add(jbtComputeBMI);
 
-		add(p1, BorderLayout.CENTER);
-		add(p2, BorderLayout.SOUTH);
+		JPanel p3 = new JPanel(new GridLayout(2, 2));
+		p3.add(new JLabel("Your BMI is"));
+		p3.add(jtfBMI);
+		p3.add(new JLabel("Status"));
+		p3.add(jtfResult);
+		
+		add(p1, BorderLayout.NORTH);
+		add(p2, BorderLayout.CENTER);
+		add(p3, BorderLayout.SOUTH);
 		
 		jbtComputeBMI.addActionListener(new BMIListener());
 		
