@@ -1,8 +1,11 @@
 
 import javax.swing.JFrame;
+
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 
 public class BMIFrame extends JFrame {
@@ -34,7 +37,6 @@ public class BMIFrame extends JFrame {
 		p1.add(jtfWeight);
 		p1.add(new JLabel("Your BMI is"));
 		p1.add(jtfBMI);
-		p1.setBorder(new TitledBorder("Enter your height and weight"));
 		
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		p2.add(jbtComputeBMI);
