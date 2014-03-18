@@ -55,9 +55,8 @@ public class BMIFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			double height = Double.parseDouble(jtfHeight.getText());
 			double weight = Double.parseDouble(jtfWeight.getText());
-			double bmi = Double.parseDouble(jtfBMI.getText());
 			
-			BMI bmi2 = new BMI(height, weight, bmi);
+			BMI bmi2 = new BMI(height, weight);
 			
 			jtfBMI.setText(String.format("%.2f" , bmi2.getBMI()));
 			
@@ -72,15 +71,13 @@ class BMI {
 	
 	private double weight;
 	private double height;
-	private double bmi;
 
 	public static final double KILOGRAMS_PER_POUND = 0.45359237;
 	public static final double METERS_PER_INCH = 0.0254;
 	
-	public BMI(double weight, double height, double bmi) {
+	public BMI(double weight, double height) {
 		this.weight = weight;
 		this.height = height;
-		this.bmi = bmi;
 	}
 	
 	public double getBMI() {
