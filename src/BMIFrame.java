@@ -1,12 +1,11 @@
 
 import javax.swing.JFrame;
-
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
+
 
 public class BMIFrame extends JFrame {
 
@@ -23,12 +22,11 @@ public class BMIFrame extends JFrame {
 	private JTextField jtfHeight = new JTextField();
 	private JTextField jtfWeight = new JTextField();
 	private JTextField jtfBMI = new JTextField();
+	private JTextField jtfResult = new JTextField();
 	
 	private JButton jbtComputeBMI = new JButton("Compute BMI");
 	
 	public BMIFrame() {
-		
-		
 		
 		JPanel p1 = new JPanel(new GridLayout(5, 2));
 		p1.add(new JLabel("Your height in inches"));
@@ -37,6 +35,8 @@ public class BMIFrame extends JFrame {
 		p1.add(jtfWeight);
 		p1.add(new JLabel("Your BMI is"));
 		p1.add(jtfBMI);
+		p1.add(new JLabel("Result"));
+		p1.add(jtfResult);
 		
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		p2.add(jbtComputeBMI);
@@ -59,12 +59,14 @@ public class BMIFrame extends JFrame {
 			BMI bmi2 = new BMI(height, weight);
 			
 			jtfBMI.setText(String.format("%.2f" , bmi2.getBMI()));
+			jtfResult.setText(String.format("%s" , bmi2.getStatus()));
 			
 		}
 		
 	}
 	
 }
+
 
 class BMI {
 	
@@ -90,6 +92,18 @@ class BMI {
 	
 	public double getHeight() {
 		return height;
+	}
+	
+	public String getStatus() {
+		double bmi = getBMI();
+		if (bmi < 18.5)
+			return "Underweight";
+		else if (bmi < 25)
+			return "Normal";
+		else if (bmi < 30)
+			return "Overweight";
+		else
+			return "Obese";
 	}
 	
 }
