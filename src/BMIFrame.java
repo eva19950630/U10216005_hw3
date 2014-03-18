@@ -31,9 +31,9 @@ public class BMIFrame extends JFrame {
 		
 		
 		JPanel p1 = new JPanel(new GridLayout(5, 2));
-		p1.add(new JLabel("Height"));
+		p1.add(new JLabel("Your height in inches"));
 		p1.add(jtfHeight);
-		p1.add(new JLabel("Weight"));
+		p1.add(new JLabel("Your weight in pounds"));
 		p1.add(jtfWeight);
 		p1.add(new JLabel("Your BMI is"));
 		p1.add(jtfBMI);
