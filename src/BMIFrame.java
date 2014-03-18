@@ -77,7 +77,7 @@ class BMI {
 	}
 	
 	public double getBMI() {
-		return height / (weight * weight);
+		return weight / (height * height);
 	}
 	
 	public double getWeight() {
