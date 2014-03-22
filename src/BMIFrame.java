@@ -29,13 +29,13 @@ public class BMIFrame extends JFrame {
 	// Constructor
 	public BMIFrame() {
 		
-		// Panel p1 to hold labels and text fields(height, weight)
+		// Panel p1 to hold labels and text fields(weight, height)
 		JPanel p1 = new JPanel(new GridLayout(2, 1));
-		p1.setBorder(new TitledBorder("Enter your height and weight"));
-		p1.add(new JLabel("Your height in inches"));
-		p1.add(jtfHeight);
-		p1.add(new JLabel("Your weight in pounds"));
+		p1.setBorder(new TitledBorder("Enter your weight and height"));
+		p1.add(new JLabel("Your weight in inches"));
 		p1.add(jtfWeight);
+		p1.add(new JLabel("Your height in pounds"));
+		p1.add(jtfHeight);
 		
 		// Panel p2 to hold the button
 		JPanel p2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -66,8 +66,8 @@ public class BMIFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			// Get values from text fields
-			double height = Double.parseDouble(jtfHeight.getText());
 			double weight = Double.parseDouble(jtfWeight.getText());
+			double height = Double.parseDouble(jtfHeight.getText());
 			
 			// Create a bmi2 object
 			// BMI defined under this class
