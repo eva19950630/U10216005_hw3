@@ -71,7 +71,7 @@ public class BMIFrame extends JFrame {
 			
 			// Create a bmi2 object
 			// BMI defined under this class
-			BMI bmi2 = new BMI(height, weight);
+			BMI bmi2 = new BMI(weight, height);
 			
 			// Display BMI and status
 			jtfBMI.setText(String.format("%.2f" , bmi2.getBMI()));
