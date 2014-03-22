@@ -32,9 +32,9 @@ public class BMIFrame extends JFrame {
 		// Panel p1 to hold labels and text fields(weight, height)
 		JPanel p1 = new JPanel(new GridLayout(2, 1));
 		p1.setBorder(new TitledBorder("Enter your weight and height"));
-		p1.add(new JLabel("Your weight in inches"));
+		p1.add(new JLabel("Your weight in pounds"));
 		p1.add(jtfWeight);
-		p1.add(new JLabel("Your height in pounds"));
+		p1.add(new JLabel("Your height in inches"));
 		p1.add(jtfHeight);
 		
 		// Panel p2 to hold the button
